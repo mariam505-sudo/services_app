@@ -1,17 +1,47 @@
-# services_app
+# Home Services App
 
-A new Flutter project.
+## Flutter Version
+Flutter 3.44.4
 
-## Getting Started
+## Packages Used
+- gap
+- flutter
+- cupertino_icons
 
-This project is a starting point for a Flutter application.
+## Project Structure
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib
+│
+├── core
+│   ├── constants
+│   ├── theme
+│   └── utils
+│
+├── features
+│   ├── auth
+│   │
+│   └── home
+│       ├── data
+│       │   └── dummy_data.dart
+│       │
+│       ├── domain
+│       │   └── models
+│       │       └── service_model.dart
+│       │
+│       └── presentation
+│           ├── screens
+│           │   ├── home_screen.dart
+│           │   ├── services_list_screen.dart
+│           │   ├── detail_screen.dart
+│           │   ├── booking_screen.dart
+│           │   ├── profile_screen.dart
+│           │   └── main_screen.dart
+│           │
+│           └── widgets
+│               ├── service_card.dart
+│               ├── feedback_card.dart
+│               ├── mini_card.dart
+│               ├── category_chip.dart
+│               └── search_bar.dart
+│
+└── main.dart
