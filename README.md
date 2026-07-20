@@ -10,8 +10,10 @@ Flutter 3.44.4
 
 ## Project Structure
 
+## Project Structure
+
+```text
 lib
-│
 ├── core
 │   ├── constants
 │   ├── theme
@@ -19,15 +21,12 @@ lib
 │
 ├── features
 │   ├── auth
-│   │
 │   └── home
 │       ├── data
 │       │   └── dummy_data.dart
-│       │
 │       ├── domain
 │       │   └── models
 │       │       └── service_model.dart
-│       │
 │       └── presentation
 │           ├── screens
 │           │   ├── home_screen.dart
@@ -36,7 +35,6 @@ lib
 │           │   ├── booking_screen.dart
 │           │   ├── profile_screen.dart
 │           │   └── main_screen.dart
-│           │
 │           └── widgets
 │               ├── service_card.dart
 │               ├── feedback_card.dart
@@ -45,3 +43,4 @@ lib
 │               └── search_bar.dart
 │
 └── main.dart
+```
