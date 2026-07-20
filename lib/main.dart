@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:services_app/features/home/persentation/screens/home_screen.dart';
 import 'package:services_app/features/home/persentation/screens/main_screen.dart';
+import 'package:services_app/features/home/persentation/screens/services_list_screen.dart';
+import 'package:services_app/detail_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'services_app',
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      home:  MainScreen(),
      
       
     );

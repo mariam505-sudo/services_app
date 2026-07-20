@@ -5,13 +5,15 @@ class ServiceCard extends StatelessWidget {
   final String iconPath;
   final String title;
   final String subtitle;
- 
+  final VoidCallback? onPressed;
+
   const ServiceCard({
+    this.onPressed,
     required this.iconPath,
     required this.title,
     required this.subtitle,
   });
- 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,31 +45,33 @@ class ServiceCard extends StatelessWidget {
           const Gap(10),
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           const Gap(5),
           Text(
             subtitle,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Colors.grey,
-            ),
+            style: const TextStyle(fontSize: 12, color: Colors.grey),
           ),
           const Gap(10),
           Container(
-            width: 28,
-            height: 28,
+            width: 36,
+            height: 36,
             decoration: BoxDecoration(
-              color: const Color(0xFFD3E4FE),
-              borderRadius: BorderRadius.circular(20),
+              color: const Color(0xFFF3F7FF),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: const Color(0xFFE3ECFF)),
             ),
-            child: const Icon(
-              Icons.arrow_forward,
-              size: 16,
-              color: Colors.blue,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: onPressed,
+                child: const Icon(
+                  Icons.arrow_forward_rounded,
+                  color: Color(0xFF2563EB),
+                  size: 20,
+                ),
+              ),
             ),
           ),
         ],
